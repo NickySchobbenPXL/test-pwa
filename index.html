@@ -15,6 +15,13 @@
       <link rel="stylesheet" crossorigin href="/pwa-superhero/assets/index-D1WzkVR5.css">
     <link rel="manifest" href="/pwa-superhero/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/pwa-superhero/registerSW.js"></script></head>
     <body>
-        <div id="app"></div>
+        <div id="app"></div>
+
+        <script>
+            if (navigator.serviceWorker) {
+                navigator.serviceWorker.register('/pwa-superhero/sw.js', {scope: '/pwa-superhero/'})
+            }
+        </script>
+
     </body>
 </html>
